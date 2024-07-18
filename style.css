@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url(/fonts/Gilroy-Medium.e7e7c091.woff2);
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #fcfaf8;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    position: fixed;
+    top: 6.5vh;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #383838;
+    display: block;
+}
+
+.loader-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#loader-bg-black {
+    background-color: #161616;
+    z-index: 3;
+}
+
+#loader-bg-green {
+    background-color: #14cf93;
+    z-index: 1;
+}
+
+.loader-top-con {
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 0.65vw;
+    text-align: center;
+}
+
+.loader-top-con .reveal {
+    font-weight: 300;
+}
+
+#loader .loading-anim {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#loader .loading-anim:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: loading-ring 1.2s linear infinite;
+}
+
+@keyframes loading-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(1turn);
+    }
+}
