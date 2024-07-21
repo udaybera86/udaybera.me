@@ -119,15 +119,21 @@ body {
     justify-content: center;
 }
 
-.diff-style {
-    font-family: "Mazius";
+#loader .author-name .diff-style {
     color: #14cf93;
     font-size: 5vw;
 }
 
+.diff-style {
+    font-family: "Mazius";
+}
+
+#loader .author-name .parent {
+    text-align: center;
+}
+
 .reveal .parent {
-    display: flex;
-    justify-content: center;
+    display: block;
     overflow-y: hidden;
     width: 100%;
 }
@@ -193,4 +199,68 @@ body {
 
 .header a:hover::before {
     width: 100%;
+}
+
+/* --------- Home Section ------------ */
+
+.home {
+    padding: 24vh 0 0 0;
+    margin: 0 5vw;
+}
+
+.home-title-first {
+    display: flex;
+    align-items: start;
+}
+
+.home .home-title {
+    font-size: 13vw;
+    font-weight: 400;
+    color: #383838;
+}
+
+.home-title-first-right {
+    display: flex;
+    padding-left: 10vw;
+    padding-top: 8vh;
+    color: #a2a2a2;
+    font-size: 0.75vw;
+    text-transform: uppercase;
+}
+
+.home-title-first-right .freelance-tag-line {
+    margin-right: 10vw;
+}
+
+.home-title-first-right .freelance-tag-line .diff-style {
+    vertical-align: bottom;
+    font-weight: 600;
+}
+
+.home-title-second {
+    display: flex;
+    align-items: end;
+}
+
+.home-title-second-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 35%;
+    margin-right: 3vw;
+}
+
+.home-title-second-left .arrow-down {
+    padding-bottom: 6vh;
+}
+
+.home-title-second-left .svg-anim svg {
+    width: 18.4vw;
+    height: 13.9vw;
+}
+
+#web>path {
+    stroke: #14cf93;
+    fill: none;
+    stroke-width: 30px;
 }
