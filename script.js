@@ -1,6 +1,18 @@
+function updateTime() {
+    const timeElement = document.querySelector('.current-time');
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const formattedTime = `${hours}:${minutes}`;
+
+    timeElement.textContent = formattedTime;
+}
+
 function valueSetters() {
     gsap.set(".home .parent .child", { y: "100%", rotateX: "135deg", opacity: 0 });
-    gsap.set(".home .arrow-down", { opacity: 0 })
+    gsap.set(".home .arrow-down", { opacity: 0 });
+    gsap.set("#main", { display: "none" })
 }
 
 function spanReveal() {
@@ -54,6 +66,9 @@ tl
         delay: -1,
         ease: Circ.easeInOut
     },"b")
+    .to("#main", {
+        display: "block"
+    })
     .to("#loader-bg-green", {
         height: 0,
         bottom: "100%",
@@ -114,6 +129,8 @@ function animateSvg() {
 }
 
 
+updateTime();
+setInterval(updateTime, 60000);
 spanReveal();
 valueSetters();
 loadingAnimation();
